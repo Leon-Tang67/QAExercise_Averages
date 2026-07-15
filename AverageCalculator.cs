@@ -28,7 +28,17 @@ internal class AverageCalculator
 
     internal void AveragesWithFor()
     {
-        
+        double total = 0.0;
+        Console.WriteLine("How many numbers do you want to enter?");
+        string input = Console.ReadLine();
+        int number = int.Parse(input);
+        for (int i = 0; i < number; i++)
+        {
+            Console.Write("Please input number you want to put into average calculation? ");
+            string input2 = Console.ReadLine();
+            total += double.Parse(input2);
+        }
+        Console.WriteLine($"The average of those numbers is {total / number}");
     }
 
     internal void AveragesWithWhile()
